@@ -61,6 +61,20 @@
                 </div>
             </div>
         </div>
+
+    <script>
+    window.onload = function () {
+        const images = document.querySelectorAll("#game-container img");
+
+        images.forEach(img => {
+            if (img.naturalHeight > img.naturalWidth) {
+                img.classList.add("vertical");
+            } else {
+                img.classList.add("horizontal");
+            }
+        });
+    };
+    </script>
     
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
