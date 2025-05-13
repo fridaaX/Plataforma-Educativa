@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Sonidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+    <div class="header2">
+        <a href="niveles.html">
+            <img src="./imagenes/flecha2.png" alt="Regresar" class="back-button">
+        </a>
+    </div>
+
+    <div id="juego">
+        <h2 id="nivel-texto">Nivel </h2>
+        <div id="imagenes" class="contenedor"></div>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="mensaje" class="mensaje"></div>
+
+    <!-- Contenedor de la bocina -->
+    <div id="bocina-container">
+          <img id="bocina" src="imagenes/bocina.png" alt="Reproducir sonido">
+    </div>
+
+    <!-- Botones de control -->
+    <div id="controles">
+        <button id="siguiente" style="display: none;">Siguiente Nivel</button>
+        <button id="reiniciar" style="display: none;">Terminar Juego</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

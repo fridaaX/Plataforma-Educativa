@@ -1,0 +1,170 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff69b4;
+  }
+  
+  button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff4081;
+  }
+  
+  .game-container {
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    gap: 20px;
+  }
+
+  .drop-zone, .pieces {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .drop-zone {
+    background-color: #fff8dc;
+    border: 3px dashed #ccc;
+  }
+
+  .pieces {
+    background-color: #e0f7fa;
+  }
+
+  .drop-zone img, .pieces img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  
+  .drop-zone img {
+    border: 2px dashed transparent;
+    padding: 5px;
+  }
+  
+  .drop-zone img.correct {
+    border: 2px solid green;
+  }
+  
+  .drop-zone img.wrong {
+    border: 2px solid red;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Contenedor final */
+
+/* Mensaje */
+.final-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Contenedor de botones */
+.botones-final {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background-color: #ff69b4;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #ff4081;
+  transform: scale(1.05);
+}
+
+@media (min-width: 600px) {
+  .botones-final {
+    flex-direction: row;
+  }
+}
+
+.final-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f0f8ff;
+}
+
+.mensaje-error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffdddd;
+  color: #e74c3c;
+  padding: 20px 40px;
+  border: 2px solid #e74c3c;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.header2 {
+	position: absolute; 
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: flex-start; 
+	justify-content: flex-start;
+	padding: 10px;
+}
+
+
+.back-button {
+	width: 120px;
+	height: 60px;
+	cursor: pointer;
+}
