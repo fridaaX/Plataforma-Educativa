@@ -93,18 +93,38 @@ p{
 
 
 .level-button {
-	padding: 10px 20px; /* Tamaño cómodo */
+	padding: 10px 20px;
 	font-size: 16px;
 	font-weight: bold;
 	color: white;
 	border: none;
-	border-radius: 8px; /* Bordes más suaves */
+	border-radius: 8px;
 	cursor: pointer;
-	background: linear-gradient(45deg, #1662d3, #6ddbfc, #c44ffa, #eb547a); /* Colores pastel pero vibrantes */
+	background: linear-gradient(45deg, #1662d3, #6ddbfc, #c44ffa, #eb547a);
 	background-size: 200% 200%;
 	transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease-in-out;
-	box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5); /* Sombra con un tono pastel */
+	box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+	max-width: 90vw;         /* No más ancho que el viewport */
+	width: auto;
+	box-sizing: border-box;
 }
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 600px) {
+	.level-button {
+		font-size: 14px;
+		padding: 8px 16px;
+	}
+}
+
+/* Muy pequeñas (teléfonos muy estrechos) */
+@media (max-width: 400px) {
+	.level-button {
+		font-size: 12px;
+		padding: 6px 12px;
+	}
+}
+
 
 /* Efecto al pasar el mouse */
 .level-button:hover {
